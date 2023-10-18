@@ -1,3 +1,5 @@
 <template>
-  <h1>あああ</h1>
+  <div>
+    <Header />
+  </div>
 </template>
