@@ -14,13 +14,13 @@
           }
         "
       ></span>
-      <img class="modal_image" :src="work.imageUrl" alt="works1" />
+      <img class="modal_image" :src="work.image.url" alt="works1" />
       <div class="modal_content">
         <h3 class="modal_content_title">{{ work.title }}</h3>
         <a :href="work.link" class="modal_content_link">{{ work.link }}</a>
         <div class="modal_tags">
-          <span class="modal_tag" v-for="(tag, i) in work.tags" :key="i">
-            {{ tag }}
+          <span class="modal_tag" v-for="(skill, i) in work.skills" :key="i">
+            {{ skill.name }}
           </span>
         </div>
         <p class="modal_content_text">{{ work.description }}</p>

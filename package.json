@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@esbuild/darwin-x64": "^0.19.5",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "nuxt-microcms-module": "^3.0.2"
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="work">
-    <img class="work_image" :src="work.imageUrl" alt="works1" />
+    <img class="work_image" :src="work.image.url" alt="works1" />
     <div class="work_content">
       <h3 class="work_content_title">{{ work.title }}</h3>
       <p class="work_content_caption">{{ work.caption }}</p>

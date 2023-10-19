@@ -1,6 +1,6 @@
 <template>
   <div class="skillCard">
-    <img class="skillCard_image" :src="skill.imageUrl" alt="skill" />
+    <img class="skillCard_image" :src="skill.image.url" alt="skill" />
     <div class="skillCard_content">
       <h3 class="skillCard_title h3">{{ skill.name }}</h3>
       <p class="skillCard_description">{{ skill.description }}</p>
