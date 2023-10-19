@@ -1,6 +1,6 @@
 <template>
   <div class="works">
-    <Work
+    <WorkCard
       v-for="(work, i) in works"
       :key="i"
       :work="work"

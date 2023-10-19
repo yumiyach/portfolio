@@ -4,11 +4,11 @@
     <div class="contents">
       <div class="content">
         <h2 class="h2">自己紹介</h2>
-        <Prolife />
+        <ProlifePanel />
       </div>
       <div class="content">
         <h2 class="h2">個人開発作品</h2>
-        <Works :works="works" />
+        <WorksPanel :works="works" />
       </div>
       <div class="content">
         <h2 class="h2">スキル</h2>
