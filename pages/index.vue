@@ -4,7 +4,27 @@
     <div class="contents">
       <div class="content">
         <h2 class="h2">自己紹介</h2>
-        <ProlifePanel />
+        <ProlifePanel :profile="{
+          imageUrl:'/avatar.jpg',
+          name:'弓矢',
+          caption:'たのしい場所を作りたい人です。',
+          list:[
+            '',
+            '男性向け女性向け問わず、同人について知識があります。',
+          ],
+          links:[
+            {
+              name:'github',
+              iconUrl:'/github-mark.png',
+              url:'https://twitter.com/yumiya_yumiyumi',
+            },
+            {
+              name:'github',
+              iconUrl:'/github-mark.png',
+              url:'https://twitter.com/yumiya_yumiyumi',
+            }
+          ]
+        }"/>
       </div>
       <div class="content">
         <h2 class="h2">個人開発作品</h2>
