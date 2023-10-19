@@ -1,10 +1,71 @@
 body {
   font-family: "Helvetica Neue", Arial, "Hiragino Sans",
     "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 14px;
+  color: #444;
 }
 
 .h1 {
   font-size: 3rem;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 1.2;
+}
+.h2 {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 200;
+  margin-bottom: 30px;
+  color: #385170;
+  text-align: center;
+}
+.h2::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  background: #385170;
+  transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.contents:hover .h2::after {
+  left: 30%;
+  right: 30%;
+  width: auto;
+}
+.h3 {
+  color: #142d4c;
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-top: 0;
+}
+
+.contents {
+  margin: 0 auto;
+  max-width: 800px;
+}
+.content {
+  padding: 40px 10px;
+  position: relative;
+}
+.content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100vw;
+  left: calc((800px - 100vw) / 2);
+}
+.content:nth-child(even)::before {
+  background: #fff;
+}
+.content:nth-child(even)::before {
+  background: #ececec;
+}
+@media screen and (max-width: 800px) {
+  .content::before {
+    left: 0;
+    width: 100%;
+  }
 }
