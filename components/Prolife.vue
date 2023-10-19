@@ -4,7 +4,7 @@
         <img src="/avatar.jpg" alt="avatar" />
     </div>
     <div class="profile_content">
-      <h3 class="h3">弓矢</h3>
+      <h3 class="profile_name">弓矢</h3>
       <p class="profile_copy">たのしい場所を作りたいWebエンジニアです。</p>
       <ul class="profile_list">
         <li>オタク文化わかります</li>
@@ -41,6 +41,10 @@
   border-radius: 50%;
 }
 
-.profile_content {
+.profile_name {
+  color: #142d4c;
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-top: 0;
 }
 </style>

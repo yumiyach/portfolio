@@ -6,3 +6,9 @@ export type TWork = {
   description: string;
   link: string;
 };
+
+export type TSkill = {
+  name: string;
+  imageUrl: string;
+  description: string;
+};

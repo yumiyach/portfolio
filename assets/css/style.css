@@ -6,6 +6,10 @@ body {
   font-weight: 200;
 }
 
+img{
+  vertical-align: bottom;
+}
+
 a {
   color: #0088aa;
 }
