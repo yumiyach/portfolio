@@ -1,0 +1,10 @@
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+.h1 {
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1.2;
+}

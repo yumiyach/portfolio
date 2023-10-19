@@ -43,7 +43,4 @@
   align-items: center;
   height: 500px;
 }
-.h1 {
-  margin: 0;
-}
 </style>
