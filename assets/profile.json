@@ -22,11 +22,6 @@
       "name": "note",
       "iconUrl": "/note.png",
       "url": "https://note.com/yumiya"
-    },
-    {
-      "name": "お問合せ",
-      "iconUrl": "/post.png",
-      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdnW0_HoPtNdZJrk-QBvawTE_yGD_5MI_ENmZnQOJF3fSjSnA/viewform"
     }
   ],
   "list": [

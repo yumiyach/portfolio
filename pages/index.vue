@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <HeaderPanel />
     <div class="contents">
       <div class="content">
         <h2 class="h2">自己紹介</h2>
@@ -13,6 +13,10 @@
       <div class="content">
         <h2 class="h2">スキル</h2>
         <SkillsPanel :skills="skills" />
+      </div>
+      <div class="content">
+        <h2 class="h2">お問合せ</h2>
+        <ContactPanel />
       </div>
     </div>
   </div>

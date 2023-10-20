@@ -106,12 +106,12 @@ const props = defineProps({
 .profile_link {
   display: flex;
   align-items: center;
-  color: #142d4c;
+  color: #385170;
   font-size: 0.8rem;
   margin: 4px;
   font-weight: 400;
   text-decoration: none;
-  border: 1px solid #142d4c;
+  border: 1px solid #385170;
   padding: 2px 4px;
   border-radius: 8px;
 }
