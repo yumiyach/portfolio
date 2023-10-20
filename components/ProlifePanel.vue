@@ -12,6 +12,7 @@
           v-for="(link, i) in profile.links"
           :key="i"
           :href="link.url"
+          target="_blank"
         >
           <img :src="link.iconUrl" alt="icon" />
           {{ link.name }}
@@ -95,6 +96,7 @@ const props = defineProps({
 .profile_links {
   display: flex;
   margin-bottom: 12px;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 768px) {
   .profile_links {
@@ -106,7 +108,7 @@ const props = defineProps({
   align-items: center;
   color: #142d4c;
   font-size: 0.8rem;
-  margin: 0 4px;
+  margin: 4px;
   font-weight: 400;
   text-decoration: none;
   border: 1px solid #142d4c;
@@ -117,6 +119,7 @@ const props = defineProps({
   width: 20px;
   height: 20px;
   margin-right: 4px;
+  object-fit: contain;
 }
 .profile_list {
   margin-bottom: 0;

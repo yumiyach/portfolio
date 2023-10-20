@@ -1,0 +1,36 @@
+{
+  "imageUrl": "/avatar.jpg",
+  "name": "弓矢",
+  "caption": "たのしい場所を作りたい人です。",
+  "links": [
+    {
+      "name": "misskey",
+      "iconUrl": "/misskey.png",
+      "url": "https://misskey.io/@yumiya"
+    },
+    {
+      "name": "Twitter",
+      "iconUrl": "/twitter.png",
+      "url": "https://twitter.com/yumiya_yumigon"
+    },
+    {
+      "name": "github",
+      "iconUrl": "/github-mark.png",
+      "url": "https://github.com/yumiyach"
+    },
+    {
+      "name": "note",
+      "iconUrl": "/note.png",
+      "url": "https://note.com/yumiya"
+    },
+    {
+      "name": "お問合せ",
+      "iconUrl": "/post.png",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdnW0_HoPtNdZJrk-QBvawTE_yGD_5MI_ENmZnQOJF3fSjSnA/viewform"
+    }
+  ],
+  "list": [
+    "",
+    "男性向け女性向け問わず、同人について知識があります。"
+  ]
+}
