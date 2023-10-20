@@ -53,7 +53,9 @@ const props = defineProps({
 }
 .profile_photo {
   margin-right: 20px;
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .profile_photo {
     margin-right: 0;
     margin-bottom: 20px;
   }
@@ -72,7 +74,9 @@ const props = defineProps({
   font-weight: 200;
   margin-top: 0;
   margin-bottom: 4px;
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .profile_name {
     text-align: center;
   }
 }
@@ -82,14 +86,18 @@ const props = defineProps({
   font-weight: 100;
   margin-bottom: 12px;
   margin-top: 0;
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .profile_caption {
     text-align: center;
   }
 }
 .profile_links {
   display: flex;
   margin-bottom: 12px;
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .profile_links {
     justify-content: center;
   }
 }

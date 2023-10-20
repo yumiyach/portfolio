@@ -4,7 +4,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { TSkill } from '~/types';
+import { TSkill } from "~/types";
 const props = defineProps({
   skills: {
     type: Object as () => TSkill[],
@@ -15,13 +15,14 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.skills{
+.skills {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .skills {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 </style>
-
