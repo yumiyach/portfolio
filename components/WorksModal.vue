@@ -25,7 +25,7 @@
       <img class="modal_image" :src="work.image.url" alt="works1" />
       <div class="modal_content">
         <h3 class="modal_content_title">{{ work.title }}</h3>
-        <a :href="work.link" class="modal_content_link">{{ work.link }}</a>
+        <a :href="work.url" class="modal_content_link">{{ work.url }}</a>
         <div class="modal_tags">
           <span class="modal_tag" v-for="(skill, i) in work.skills" :key="i">
             {{ skill.name }}

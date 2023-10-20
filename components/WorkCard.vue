@@ -47,7 +47,7 @@ const props = defineProps({
   justify-content: flex-end;
   background: linear-gradient(transparent, rgba(0, 0, 0, 1));
   width: 100%;
-  height: 50px;
+  height: 35%;
   margin-bottom: 0;
   margin-top: auto;
   color: #fff;

@@ -6,10 +6,10 @@ export type TWork = {
   image: MicroCMSImage
   skills: TSkill[]
   description: string
-  link: string
+  url: string
 }
 
-export type TSkillCategory = 'front-end' | 'back-end' | 'other'
+export type TSkillCategory = 'front-end' | 'back-end' | 'others'
 
 export type TSkill = {
   name: string
@@ -17,7 +17,8 @@ export type TSkill = {
   description: string
   level: number
   visible: boolean
-  category: TSkillCategory[]
+  category: TSkillCategory[],
+  experiences: string[]
 }
 
 export type TProfile = {
