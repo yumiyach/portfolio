@@ -38,30 +38,20 @@
 </template>
 
 <script setup lang="ts">
-import { TWork, TSkill, TProfile } from "~/types";
+import { TWork, TSkill } from "~/types";
 
-const  { data } = await useMicroCMSGetList<TSkill>({
-  endpoint: "skills",
+const skills = useState<TSkill[]>("skills", () => []);
+const works = useState<TWork[]>("works", () => []);
+
+onMounted(async () => {
+  await useMicroCMSUrl();
+  const worksRes = await useMicroCMSGetList<TWork>({
+    endpoint: "works",
+  });
+  works.value = worksRes.data.value?.contents ?? [];
+  const skillsRes = await useMicroCMSGetList<TSkill>({
+    endpoint: "skills",
+  });
+  skills.value = skillsRes.data.value?.contents ?? [];
 });
-console.log(data)
-const skills: TSkill[] = Array(6)
-  .fill({})
-  .map((v, i) => ({
-    name: "スキル名" + i,
-    description: "スキル説明" + i,
-    image: {url:"/work.jpg"},
-    level:i,
-    visible:true,
-    category:"front-end",
-  }));
-const works: TWork[] = Array(6)
-  .fill({})
-  .map((v, i) => ({
-    title: "作品名" + i,
-    caption: "作品説明" + i,
-    image: {url:"/work.jpg"},
-    link: "/" + i,
-    description: "作品説明" + i,
-    skills:skills
-  }));
 </script>

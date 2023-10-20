@@ -9,13 +9,15 @@ export type TWork = {
   link: string
 }
 
+export type TSkillCategory = 'front-end' | 'back-end' | 'other'
+
 export type TSkill = {
   name: string
   image: MicroCMSImage
   description: string
   level: number
   visible: boolean
-  category: 'front-end' | 'back-end' | 'other'
+  category: TSkillCategory[]
 }
 
 export type TProfile = {
