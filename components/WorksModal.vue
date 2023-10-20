@@ -5,6 +5,14 @@
       display: visible ? 'flex' : 'none',
     }"
   >
+    <div
+      class="modal-shadow"
+      @click="
+        () => {
+          onClose();
+        }
+      "
+    ></div>
     <div v-if="work" class="modal_body">
       <span
         class="modal_close"
@@ -23,7 +31,7 @@
             {{ skill.name }}
           </span>
         </div>
-        <p class="modal_content_text">{{ work.description }}</p>
+        <div class="modal_content_text" v-html="work.description"></div>
       </div>
     </div>
   </div>
@@ -62,15 +70,25 @@ const props = defineProps({
   justify-content: center;
   align-items: center;
   display: none;
+  z-index: 100;
+}
+.modal-shadow {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.5);
 }
 .modal_close {
   position: absolute;
   cursor: pointer;
-  top: -24px;
-  right: 0px;
+  top: 4px;
+  right: 4px;
   width: 20px;
   height: 20px;
+  z-index: 100;
 }
 .modal_close::before,
 .modal_close::after {
@@ -80,7 +98,7 @@ const props = defineProps({
   left: 50%;
   width: 1px;
   height: calc(1.41 * 20px);
-  background: #fff;
+  background: #888;
 }
 
 .modal_close::before {
@@ -96,26 +114,32 @@ const props = defineProps({
   background: #fff;
   width: 80%;
   max-width: 800px;
+  overflow: scroll;
+  max-height: calc(70vh - 40px);
 }
 @media screen and (max-width: 768px) {
   .modal_body {
+    max-height: calc(100vh - 40px);
+    display: block;
     flex-direction: column;
   }
 }
 .modal_image {
   width: 50%;
   aspect-ratio: 1.5;
-  object-fit: cover;
+  object-fit: contain;
 }
 @media screen and (max-width: 768px) {
   .modal_image {
     width: 100%;
     margin-bottom: 20px;
+    aspect-ratio: auto;
   }
 }
 .modal_content {
   width: 50%;
   padding: 20px;
+  overflow: scroll;
 }
 @media screen and (max-width: 768px) {
   .modal_content {
@@ -125,7 +149,7 @@ const props = defineProps({
 }
 .modal_content_title {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 200;
   margin-bottom: 4px;
   margin-top: 0;
 }
@@ -151,5 +175,12 @@ const props = defineProps({
   border-radius: 4px;
   margin-right: 8px;
   margin-bottom: 8px;
+}
+</style>
+
+<style>
+.modal_content_text h4 {
+  font-weight: 400;
+  font-size: 1.1rem;
 }
 </style>
