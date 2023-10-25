@@ -14,6 +14,7 @@
       "
     ></div>
     <div v-if="work" class="modal_body">
+      <span class="modal_closedLabel">公開終了</span>
       <span
         class="modal_close"
         @click="
@@ -123,6 +124,15 @@ const props = defineProps({
     display: block;
     flex-direction: column;
   }
+}
+.modal_closedLabel{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #e92323;
+  color: #fff;
+  padding: 4px;
+  font-size: 0.8rem;
 }
 .modal_image {
   width: 50%;

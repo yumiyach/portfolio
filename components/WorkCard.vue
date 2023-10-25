@@ -1,6 +1,7 @@
 <template>
   <div class="work">
-    <img class="work_image" :src="work.image.url" alt="works1" />
+    <span class="work_closedLavel" v-if="work.closed">公開終了</span>
+    <img class="work_image" :src="work.image.url" :alt="work.title" />
     <div class="work_content">
       <h3 class="work_content_title">{{ work.title }}</h3>
       <p class="work_content_caption">{{ work.caption }}</p>
@@ -31,6 +32,15 @@ const props = defineProps({
   .work {
     aspect-ratio: 2;
   }
+}
+.work_closedLavel{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #e92323;
+  color: #fff;
+  padding: 4px;
+  font-size: 0.8rem;
 }
 .work_image {
   position: absolute;
