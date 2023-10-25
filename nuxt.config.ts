@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
-    'normalize.css',
+    '~/node_modules/normalize-css/normalize.css',
     '~/assets/css/style.css'
   ],
   modules: [
