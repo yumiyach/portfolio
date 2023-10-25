@@ -4,6 +4,12 @@ on:
   push:
     branches: [main]
 
+env:
+  MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
+  MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
+  BASE_URL: ${{ secrets.BASE_URL }}
+  BUILD_ASSETS_DIR: ${{ secrets.BUILD_ASSETS_DIR }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,11 +27,6 @@ jobs:
       - name: Run tests 🧪
         run: yarn test
       - name: Generate static page
-        env:
-          MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
-          MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
-          BASE_URL: ${{ secrets.BASE_URL }}
-          BUILD_ASSETS_DIR: ${{ secrets.BUILD_ASSETS_DIR }}
         run: yarn generate
       - name: deploy to Github Page
         uses: peaceiris/actions-gh-pages@v3
