@@ -14,8 +14,10 @@ export default defineNuxtConfig({
       },
     ],
   ],
+  /*
   app: {
     baseURL: process.env.BASE_URL,
     buildAssetsDir: process.env.BUILD_ASSETS_DIR,
   }
+  */
 })
