@@ -13,9 +13,5 @@ export default defineNuxtConfig({
         apiKey: process.env.MICROCMS_API_KEY,
       },
     ],
-  ],
-  app: {
-    baseURL: process.env.BASE_URL,
-    buildAssetsDir: process.env.BUILD_ASSETS_DIR,
-  }
+  ]
 })

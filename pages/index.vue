@@ -32,6 +32,7 @@ const skills = useState<TSkill[]>("skills", () => []);
 const works = useState<TWork[]>("works", () => []);
 
 onMounted(async () => {
+  await useMicroCMSUrl();
   const worksRes = await useMicroCMSGetList<TWork>({
     endpoint: "works",
   });
