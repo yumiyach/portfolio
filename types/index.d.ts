@@ -5,6 +5,7 @@ export type TWork = {
   caption: string
   image: MicroCMSImage
   skills: TSkill[]
+  oldSkills: TSkill[]
   description: string
   url: string
   closed: boolean

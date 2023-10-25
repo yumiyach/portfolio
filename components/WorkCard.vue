@@ -55,9 +55,9 @@ const props = defineProps({
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 1)), linear-gradient(transparent, rgba(0, 0, 0, 1));
   width: 100%;
-  height: 35%;
+  height: 30%;
   margin-bottom: 0;
   margin-top: auto;
   color: #fff;
@@ -66,7 +66,7 @@ const props = defineProps({
 .work_content_title {
   font-size: 1.2rem;
   font-weight: 400;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   margin-top: 0;
 }
 .work_content_caption {

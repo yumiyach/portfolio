@@ -14,7 +14,7 @@
       "
     ></div>
     <div v-if="work" class="modal_body">
-      <span class="modal_closedLabel">公開終了</span>
+      <span v-if="work.closed" class="modal_closedLabel">公開終了</span>
       <span
         class="modal_close"
         @click="
@@ -26,9 +26,26 @@
       <img class="modal_image" :src="work.image.url" alt="works1" />
       <div class="modal_content">
         <h3 class="modal_content_title">{{ work.title }}</h3>
-        <a :href="work.url" class="modal_content_link">{{ work.url }}</a>
+        <a
+          :href="work.url"
+          :style="{
+            textDecoration: work.closed ? 'line-through' : 'none',
+          }"
+          class="modal_content_link"
+          >{{ work.url }}</a
+        >
         <div class="modal_tags">
           <span class="modal_tag" v-for="(skill, i) in work.skills" :key="i">
+            {{ skill.name }}
+          </span>
+        </div>
+        <div v-if="work.oldSkills.length" class="modal_tags">
+          <span class="modal_tags_title">過去使っていた技術:</span>
+          <span
+            class="modal_tag-old"
+            v-for="(skill, i) in work.oldSkills"
+            :key="i"
+          >
             {{ skill.name }}
           </span>
         </div>
@@ -125,7 +142,7 @@ const props = defineProps({
     flex-direction: column;
   }
 }
-.modal_closedLabel{
+.modal_closedLabel {
   position: absolute;
   top: 0;
   left: 0;
@@ -177,14 +194,25 @@ const props = defineProps({
 .modal_tags {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
-.modal_tag {
+.modal_tags_title {
+  margin-right: 8px;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+}
+.modal_tag,
+.modal_tag-old {
   font-size: 0.8rem;
   background: #eee;
   padding: 4px 8px;
   border-radius: 4px;
   margin-right: 8px;
   margin-bottom: 8px;
+}
+.modal_tag-old {
+  font-size: 0.6rem;
+  font-weight: 300;
 }
 </style>
 
