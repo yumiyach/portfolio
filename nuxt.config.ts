@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
     'normalize.css',
-    '@/assets/css/style.css'
+    '~/assets/css/style.css'
   ],
   modules: [
     [
@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     ],
   ],
   app: {
-    baseURL: '/portfolio/',
-    buildAssetsDir: 'assets',
+    baseURL: process.env.BASE_URL,
+    buildAssetsDir: process.env.BUILD_ASSETS_DIR,
   }
 })
