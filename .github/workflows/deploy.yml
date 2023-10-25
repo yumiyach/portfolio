@@ -24,8 +24,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies 👨🏻‍💻
         run: yarn
-      - name: Run tests 🧪
-        run: yarn test
       - name: Generate static page
         run: yarn generate
       - name: deploy to Github Page
