@@ -15,8 +15,6 @@ on:
 env:
   MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
   MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
-  BASE_URL: ${{ secrets.BASE_URL }}
-  BUILD_ASSETS_DIR: ${{ secrets.BUILD_ASSETS_DIR }}
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
