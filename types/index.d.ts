@@ -7,6 +7,7 @@ export type TWork = {
   skills: TSkill[]
   description: string
   url: string
+  closed: boolean
 }
 
 export type TSkillCategory = 'front-end' | 'back-end' | 'others'
