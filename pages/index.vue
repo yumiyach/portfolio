@@ -41,7 +41,7 @@ onMounted(async () => {
     endpoint: "skills",
     queries: { limit: 100 },
   });
-  skills.value = skillsRes.data.value?.contents ?? [];
+  skills.value = skillsRes.data.value?.contents.filter(s=>s.visible) ?? [];
 });
 
 useHead({

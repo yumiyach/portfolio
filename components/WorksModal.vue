@@ -32,6 +32,7 @@
             textDecoration: work.closed ? 'line-through' : 'none',
           }"
           class="modal_content_link"
+          target="_blank"
           >{{ work.url }}</a
         >
         <div class="modal_tags">
