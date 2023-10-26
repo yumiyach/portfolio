@@ -39,7 +39,12 @@ onMounted(async () => {
   works.value = worksRes.data.value?.contents ?? [];
   const skillsRes = await useMicroCMSGetList<TSkill>({
     endpoint: "skills",
+    queries: { limit: 100 },
   });
   skills.value = skillsRes.data.value?.contents ?? [];
 });
+
+useHead({
+  title:'弓矢 Webエンジニア・個人開発者'
+})
 </script>
