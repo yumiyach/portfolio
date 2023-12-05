@@ -1,11 +1,11 @@
 export default async function <T>(endpoint: string, limit: number): Promise<T[]> {
   console.log(process.env)
   const res = await fetch(
-    `https://${process.env.MICROCMS_SERVICE_DOMAIN}/api/v1/${endpoint}?limit=${limit}`,
+    `https://yumiya-portfolio.microcms.io/api/v1/${endpoint}?limit=${limit}`,
     {
       mode: "cors",
       headers: {
-        "X-MICROCMS-API-KEY": process.env.MICROCMS_API_KEY as string,
+        "X-MICROCMS-API-KEY":'E5bILxMzoZWjd6dbK1CpON18l5156F3bkmcg',
         "Content-Type": "application/json",
       },
     }

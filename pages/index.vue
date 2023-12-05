@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import { TWork, TSkill, TProfile } from "~/types";
-import profileData from "~/assets/profile.json";
+import profileData from "＠/assets/profile.json";
 import microCmsApi from "@/modules/microCmsApi";
 
 const profile = ref<TProfile>(profileData);
