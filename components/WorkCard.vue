@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { TWork } from "~/types";
+import type { TWork } from "@/middleware/types";
 
 const props = defineProps({
   work: {
@@ -33,7 +33,7 @@ const props = defineProps({
     aspect-ratio: 2;
   }
 }
-.work_closedLavel{
+.work_closedLavel {
   position: absolute;
   top: 0;
   left: 0;
@@ -55,7 +55,8 @@ const props = defineProps({
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 1)), linear-gradient(transparent, rgba(0, 0, 0, 1));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 1)),
+    linear-gradient(transparent, rgba(0, 0, 0, 1));
   width: 100%;
   height: 30%;
   margin-bottom: 0;

@@ -24,24 +24,26 @@
       <div class="skillCard_experiences">
         <span
           class="skillCard_experience"
-          v-for="(experience, i) in skill.experiences.sort((a,b)=>{
+          v-for="(experience, i) in skill.experiences.sort((a, b) => {
             // あいうえお順
-            if(a < b) return -1;
-            if(a > b) return 1;
+            if (a < b) return -1;
+            if (a > b) return 1;
             return 0;
           })"
           :key="i"
         >
-          {{ experience.replace(/^[0-9]\./, '') }}
+          {{ experience.replace(/^[0-9]\./, "") }}
         </span>
       </div>
-      <p v-if="skill.description" class="skillCard_description">{{ skill.description }}</p>
+      <p v-if="skill.description" class="skillCard_description">
+        {{ skill.description }}
+      </p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { TSkill } from "~/types";
+import type { TSkill } from "@/middleware/types";
 const props = defineProps({
   skill: {
     type: Object as () => TSkill,

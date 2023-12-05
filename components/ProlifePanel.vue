@@ -32,7 +32,8 @@
 </template>
 
 <script setup lang="ts">
-import { TProfile } from "~/types";
+import type { TProfile } from "@/middleware/types";
+
 const props = defineProps({
   profile: {
     type: Object as () => TProfile,

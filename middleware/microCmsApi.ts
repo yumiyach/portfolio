@@ -1,5 +1,4 @@
 export default async function <T>(endpoint: string, limit: number): Promise<T[]> {
-  console.log(process.env)
   const res = await fetch(
     `https://yumiya-portfolio.microcms.io/api/v1/${endpoint}?limit=${limit}`,
     {

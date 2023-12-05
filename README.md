@@ -1,66 +1,75 @@
-# スキルセットメモ
+# Nuxt 3 Minimal Starter
 
-## スキル一覧
-全体的にフロントエンドに偏ってます。
-- Vue.js(Nuxt)
-  - 業務経験: 3年
-  - Vue3, Nuxt3はまだがっつりは使ってないです。
-- React(Next.js)
-  - 業務経験なし。
-  - ここ1年ほど個人開発で使っています。業務でも問題なく使えそうな肌感覚です。
-- TypeScript
-  - 業務経験: 3年
-- HTML/CSS/JavaScript
-  - 業務経験: 5年
-  - ゴリゴリ使ってたのが3〜4年前までです。最近はあまりキャッチアップできてないです。
-- SQL
-  - 業務経験: 2ヶ月くらい
-  - 個人開発でMySQL、SQLiteを使用していました。初学者程度の知識があります。JOINはつかえます。
-- Docker
-  - 業務経験: 1年くらい？
-  - 個人開発の開発環境でよく使ってます。Docker環境の構築は個人開発でしか経験がないです。
-- Ruby on Rails, Larabel
-  - チュートリアルのTODOリスト作りました！笑　くらいのレベルです
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## 業務経験
-### LP制作
-- 担当工程: 
-  - 設計
-  - 実装
-  - テスト
-- 期間: 2017〜2020年
-- 規模: 要員数2〜5名ほど
-- 使用技術: 
-  - HTML/CSS/JavaScript
-  - JQuery
-担当した案件数は5〜10件くらい。それぞれ2〜3ヶ月ほどの新規LP制作PJに携わっています。
-社内のデザイナーが作成したデザインをもとにペライチ(一般名詞)のLPの実装を担当していました。
+## Setup
 
-### 大手金融機関様のエンドユーザー向けおすすめカード検索サイトのフロントエンド開発
-- 期間: 2019年から半年ほど
-- 担当工程: 
-  - 詳細設計
-  - 実装
-  - 単体テスト
-  - 結合テスト
-- 使用技術: 
-  - Vue.js
-  - HTML/CSS
-エンドユーザーが新規でクレジットカードを申し込む際に、おすすめのカードを検索するサイトのフロントエンドを開発しました。
-カードの情報は外部システムに保存する仕組みだったため、協力会社様とコミュニケーションをとる機会が多くありました。
+Make sure to install the dependencies:
 
-### 建設業向け施工管理システムの保守
-- 期間: 2021/8 〜 2022/7
-- 使用技術:
-  - Nuxt2
-  - Docker
-  - Git/GitHub
-  - AWS S3
-フロントエンド開発チームのリーダーをしていました。
-アジャイルチームでの開発だったため、バックエンドチームやプロダクトマネージャーとのコミュニケーションを密に行っていました。
+```bash
+# npm
+npm install
 
-### その他
-- WordPressのプラグイン開発
-  - 小規模なプラグインを開発しました。
-- APIサーバの保守
-  - Larabelで構築されたAPIサーバを2ヶ月ほど保守していました。
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm run dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm run build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm run preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

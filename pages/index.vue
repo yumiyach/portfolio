@@ -23,9 +23,9 @@
 </template>
 
 <script setup lang="ts">
-import { TWork, TSkill, TProfile } from "~/types";
-import profileData from "＠/assets/profile.json";
-import microCmsApi from "@/modules/microCmsApi";
+import type { TWork, TSkill, TProfile } from "@/middleware/types";
+import profileData from "../assets/profile.json";
+import microCmsApi from "@/middleware/microCmsApi";
 
 const profile = ref<TProfile>(profileData);
 const skills = useState<TSkill[]>("skills", () => []);

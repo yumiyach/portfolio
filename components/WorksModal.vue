@@ -57,7 +57,8 @@
 </template>
 
 <script setup lang="ts">
-import { TWork } from "~/types";
+import type { TWork } from "@/middleware/types";
+
 interface Props {
   visible: boolean;
   onClose: () => void;

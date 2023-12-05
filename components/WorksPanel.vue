@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { TWork } from "~/types";
+import type { TWork } from "@/middleware/types";
 
 const props = defineProps({
   works: {

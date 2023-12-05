@@ -24,7 +24,8 @@
   </div>
 </template>
 <script setup lang="ts">
-import { TSkill } from "~/types";
+import type { TSkill } from "@/middleware/types";
+
 const props = defineProps({
   skills: {
     type: Object as () => TSkill[],
