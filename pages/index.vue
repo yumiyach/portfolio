@@ -25,26 +25,16 @@
 <script setup lang="ts">
 import { TWork, TSkill, TProfile } from "~/types";
 import profileData from "~/assets/profile.json";
+import microCmsApi from "@/modules/microCmsApi";
 
 const profile = ref<TProfile>(profileData);
-
 const skills = useState<TSkill[]>("skills", () => []);
 const works = useState<TWork[]>("works", () => []);
 
-onMounted(async () => {
-  await useMicroCMSUrl();
-  const worksRes = await useMicroCMSGetList<TWork>({
-    endpoint: "works",
-  });
-  works.value = worksRes.data.value?.contents ?? [];
-  const skillsRes = await useMicroCMSGetList<TSkill>({
-    endpoint: "skills",
-    queries: { limit: 100 },
-  });
-  skills.value = skillsRes.data.value?.contents.filter(s=>s.visible) ?? [];
-});
+skills.value = await microCmsApi<TSkill>("skills", 100);
+works.value = await microCmsApi<TWork>("works", 100);
 
 useHead({
-  title:'弓矢 Webエンジニア・個人開発者'
-})
+  title: "弓矢 Webエンジニア・個人開発者",
+});
 </script>
